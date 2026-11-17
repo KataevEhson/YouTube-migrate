@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+# 192.168.0.102
 
 # Application definition
 
@@ -87,16 +87,7 @@ DATABASES = {
 }
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('NAME'),
-        'PORT':os.getenv('PORT'),
-        'HOST':os.getenv("HOST"),
-        'PASSWORD':os.getenv("PASSWORD"),
-        'USER': os.getenv("USER")
-    }
-}
+
 
 
 
@@ -140,9 +131,11 @@ STATICFILES_DIRS=[BASE_DIR/ 'static']
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT= BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / 'media'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'login'
